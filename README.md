@@ -4,7 +4,15 @@
 
 ## Usage
 
-Import the `audit()` function and pass in the required arguments
+Import the `audit()` function in your module and pass in the required arguments
+
+**Arguments**
+
+1. Your module name
+2. Audit database. (a json file with the list if depricated and insecure versions of you module name)
+3. Current module version
+
+Example:
 
 ```js
 import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
@@ -12,8 +20,4 @@ import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
 audit("http", "http://127.0.0.1:5500/example.json", "0.1");
 ```
 
-**Arguments**
-
-1. Your module name
-2. Audit database. (a json file with the list if depricated and insecure versions of you module name)
-3. Current module version
+Then when a user runs a program that uses your module with the `--audit` flag, it notifies the user if they are using an insecure version.
