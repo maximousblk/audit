@@ -2,6 +2,14 @@
 
 [WIP] add a notification for insecure versions of your modules
 
+## Setup
+
+You need to create a JSON database that uses the following schema.
+
+```json
+"$schema": "https://denopkg.com/maximousblk/audit/schema.json",
+```
+
 ## Usage
 
 Import the `audit()` function in your module and pass in the required arguments
@@ -18,6 +26,8 @@ Example:
 import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
 
 audit("http", "http://127.0.0.1:5500/example.json", "0.1");
+
+// your module code
 ```
 
 Then when a user runs a program that uses your module with the `--audit` flag, it notifies the user if they are using an insecure version.

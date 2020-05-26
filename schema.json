@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
+    "title": "Audit database schema",
+    "description": "Comprises of a list of insecure versions of a module",
     "default": {},
     "examples": [
         {
