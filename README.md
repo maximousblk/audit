@@ -1,10 +1,14 @@
 # audit
 
-[WIP] add a notification for insecure versions of your modules
+Add a notification for insecure versions of your modules.
+
+This is an attempt to bring some of the features of `npm audit` to Deno.
 
 ## Setup
 
 You need to create a JSON database that uses [this schema](schema.json).
+
+Example:
 
 ```json
 {
@@ -29,9 +33,7 @@ You need to create a JSON database that uses [this schema](schema.json).
 }
 ```
 
-## Usage
-
-Import the `audit()` function in your module and pass in the required arguments
+Then import the `audit()` function in your module and pass in the required arguments
 
 **Arguments**
 
@@ -53,4 +55,14 @@ await audit(
 // your module code
 ```
 
-Then when a user runs a program that uses your module with the `--audit` flag, it notifies the user if they are using an insecure version.
+Do not use a fixed version of the database if you are using git. Use the database directly from the master branch if this is the case.
+
+## Usage
+
+To run an audit on your application, add `--audit` flag to your application. This would notify you if you are using an insecure version of any of your dependencies.
+
+**NOTE:** This will only work for modules which use this module to mark their modules.
+
+## License
+
+This software is distributed under [MIT License](LICENSE)
