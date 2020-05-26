@@ -25,7 +25,7 @@ Example:
 ```js
 import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
 
-audit("http", "http://127.0.0.1:5500/example.json", "0.1");
+await audit("testModule", "https://denopkg.com/maximousblk/audit/example.json", "0.32.0");
 
 // your module code
 ```

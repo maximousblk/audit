@@ -4,12 +4,12 @@
         {
             "tag": "1.2",
             "patch": "1.2.1",
-            "note": "Vulnerability notice"
+            "note": "https://link/to/the/nocice"
         },
         {
             "tag": "2.6",
             "patch": "2.6.5",
-            "note": "Vulnerability notice"
+            "note": "This version is vulnerable to XXS"
         },
         {
             "tag": "4.6",

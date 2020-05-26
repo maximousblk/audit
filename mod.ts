@@ -28,7 +28,7 @@ export default async function audit(
             note = ` Note: ${version.note} |`;
           }
           console.log(
-            `| ${version.type}: ${module} | version: ${version.tag} |${patch}${note}`,
+            `| Insecure: ${module} | version: ${version.tag} |${patch}${note}`,
           );
         }
       });
