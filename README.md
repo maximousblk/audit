@@ -1,13 +1,13 @@
 # audit
 
-[WIP] add a notification for deprecated or insecure modules
+[WIP] add a notification for insecure versions of your modules
 
 ## Usage
 
 Import the `audit()` function and pass in the required arguments
 
 ```js
-import audit from "./mod.ts";
+import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
 
 audit("http", "http://127.0.0.1:5500/example.json", "0.1");
 ```

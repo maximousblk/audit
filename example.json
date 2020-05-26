@@ -1,34 +1,20 @@
 {
+    "$schema": "https://denopkg.com/maximousblk/audit/schema.json",
     "versions": [
         {
-            "id": "0.1",
-            "type": "deprecated",
-            "patch": "0.1.1",
-            "note": "Deprication notice"
+            "tag": "1.2",
+            "patch": "1.2.1",
+            "note": "Vulnerability notice"
         },
         {
-            "id": "0.2",
-            "type": "insecure",
-            "patch": "0.2.1",
-            "note": "Vulnerable notice"
+            "tag": "2.6",
+            "patch": "2.6.5",
+            "note": "Vulnerability notice"
         },
         {
-            "id": "0.6",
-            "type": "insecure",
-            "patch": "0.6.1",
-            "note": "Vulnerable notice"
-        },
-        {
-            "id": "0.8",
-            "type": "deprecated",
-            "patch": "0.8.1",
-            "note": "Deprication notice"
-        },
-        {
-            "id": "1.0",
-            "type": "deprecated",
-            "patch": "1.0.1",
-            "note": "Deprication notice"
+            "tag": "4.6",
+            "patch": "4.6.1",
+            "note": "Vulnerability notice"
         }
     ]
 }

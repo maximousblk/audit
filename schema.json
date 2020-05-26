@@ -1,0 +1,102 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "versions": [
+                {
+                    "tag": "1.2",
+                    "patch": "1.2.1",
+                    "note": "Vulnerability notice"
+                },
+                {
+                    "tag": "2.6",
+                    "patch": "2.6.5",
+                    "note": "Vulnerability notice"
+                },
+                {
+                    "tag": "4.6",
+                    "patch": "4.6.1",
+                    "note": "Vulnerability notice"
+                }
+            ]
+        }
+    ],
+    "required": ["versions"],
+    "additionalProperties": true,
+    "properties": {
+        "versions": {
+            "$id": "#/properties/versions",
+            "type": "array",
+            "title": "Insecure versions",
+            "description": "A list of insecure versions of your module",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "tag": "1.2",
+                        "patch": "1.2.1",
+                        "note": "Vulnerability notice"
+                    },
+                    {
+                        "tag": "2.6",
+                        "patch": "2.6.5",
+                        "note": "Vulnerability notice"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/versions/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "tag": "1.2",
+                                "patch": "1.2.1",
+                                "note": "Vulnerability notice"
+                            }
+                        ],
+                        "required": ["tag", "patch", "note"],
+                        "additionalProperties": true,
+                        "properties": {
+                            "tag": {
+                                "$id": "#/properties/versions/items/anyOf/0/properties/tag",
+                                "type": "string",
+                                "title": "version tag",
+                                "description": "Tag of an insecure version",
+                                "default": "",
+                                "examples": ["1.2"]
+                            },
+                            "patch": {
+                                "$id": "#/properties/versions/items/anyOf/0/properties/patch",
+                                "type": "string",
+                                "title": "Patched version",
+                                "description": "Tag of the patch for this version",
+                                "default": "",
+                                "examples": ["1.2.1"]
+                            },
+                            "note": {
+                                "$id": "#/properties/versions/items/anyOf/0/properties/note",
+                                "type": "string",
+                                "title": "Note",
+                                "description": "A note about the vulnerability of this version",
+                                "default": "",
+                                "examples": ["Vulnerability notice"]
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/versions/items"
+            }
+        }
+    }
+}
