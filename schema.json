@@ -40,12 +40,12 @@
                     {
                         "tag": "1.2",
                         "patch": "1.2.1",
-                        "note": "Vulnerability notice"
+                        "note": "Vulnerable to XXS"
                     },
                     {
                         "tag": "2.6",
                         "patch": "2.6.5",
-                        "note": "Vulnerability notice"
+                        "note": "https://github.com/octocat/example/issue/3345"
                     }
                 ]
             ],
@@ -55,8 +55,8 @@
                     {
                         "$id": "#/properties/versions/items/anyOf/0",
                         "type": "object",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
+                        "title": "version",
+                        "description": "One of the insecure versions",
                         "default": {},
                         "examples": [
                             {
