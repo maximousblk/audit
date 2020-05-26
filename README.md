@@ -4,10 +4,29 @@
 
 ## Setup
 
-You need to create a JSON database that uses the following schema.
+You need to create a JSON database that uses [this schema](schema.json).
 
 ```json
-"$schema": "https://denopkg.com/maximousblk/audit/schema.json",
+{
+  "$schema": "https://denopkg.com/maximousblk/audit/schema.json",
+  "versions": [
+    {
+      "tag": "1.2",
+      "patch": "1.2.1",
+      "note": "https://link/to/the/nocice"
+    },
+    {
+      "tag": "2.6",
+      "patch": "2.6.5",
+      "note": "This version is vulnerable to XXS"
+    },
+    {
+      "tag": "4.6",
+      "patch": "4.6.1",
+      "note": "Vulnerability notice"
+    }
+  ]
+}
 ```
 
 ## Usage
@@ -25,7 +44,11 @@ Example:
 ```js
 import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
 
-await audit("testModule", "https://denopkg.com/maximousblk/audit/example.json", "2.6");
+await audit(
+  "testModule",
+  "https://denopkg.com/maximousblk/audit/example.json",
+  "2.6"
+);
 
 // your module code
 ```
