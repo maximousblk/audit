@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
+    "$id": "https://deno.land/x/audit/schema.json",
     "type": "object",
     "title": "Audit database schema",
     "description": "Comprises of a list of insecure versions of a module",
@@ -11,12 +11,12 @@
                 {
                     "tag": "1.2",
                     "patch": "1.2.1",
-                    "note": "Vulnerability notice"
+                    "note": "https://link/to/the/issue"
                 },
                 {
                     "tag": "2.6",
                     "patch": "2.6.5",
-                    "note": "Vulnerability notice"
+                    "note": "This version is vulnerable to XXS"
                 },
                 {
                     "tag": "4.6",
@@ -40,17 +40,23 @@
                     {
                         "tag": "1.2",
                         "patch": "1.2.1",
-                        "note": "Vulnerable to XXS"
+                        "note": "https://link/to/the/issue"
                     },
                     {
                         "tag": "2.6",
                         "patch": "2.6.5",
-                        "note": "https://github.com/octocat/example/issue/3345"
+                        "note": "This version is vulnerable to XXS"
+                    },
+                    {
+                        "tag": "4.6",
+                        "patch": "4.6.1",
+                        "note": "Vulnerability notice"
                     }
                 ]
             ],
             "additionalItems": true,
             "items": {
+                "$id": "#/properties/versions/items",
                 "anyOf": [
                     {
                         "$id": "#/properties/versions/items/anyOf/0",
@@ -94,8 +100,7 @@
                             }
                         }
                     }
-                ],
-                "$id": "#/properties/versions/items"
+                ]
             }
         }
     }

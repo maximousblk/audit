@@ -12,7 +12,7 @@ Example:
 
 ```json
 {
-  "$schema": "https://denopkg.com/maximousblk/audit/schema.json",
+  "$schema": "https://deno.land/x/audit/schema.json",
   "versions": [
     {
       "tag": "1.2",
@@ -44,13 +44,9 @@ Then import the `audit()` function in your module and pass in the required argum
 Example:
 
 ```js
-import audit from "https://denopkg.com/maximousblk/audit/mod.ts";
+import audit from "https://deno.land/x/audit/mod.ts";
 
-await audit(
-  "testModule",
-  "https://denopkg.com/maximousblk/audit/example.json",
-  "2.6"
-);
+await audit("testModule", "https://deno.land/x/audit/example.json", "2.6");
 
 // your module code
 ```

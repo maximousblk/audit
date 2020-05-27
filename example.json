@@ -1,5 +1,5 @@
 {
-    "$schema": "https://denopkg.com/maximousblk/audit/schema.json",
+    "$schema": "https://deno.land/x/audit/schema.json",
     "versions": [
         {
             "tag": "1.2",
