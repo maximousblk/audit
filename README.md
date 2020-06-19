@@ -4,6 +4,8 @@ Add a notification for insecure versions of your modules.
 
 This is an attempt to bring some of the features of `npm audit` to Deno.
 
+ [![nest badge](https://nest.land/badge.svg)](https://nest.land/package/audit)
+
 ## Setup
 
 You need to create a JSON database that uses [this schema](schema.json).

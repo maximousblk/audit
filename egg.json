@@ -1,0 +1,12 @@
+{
+    "name": "audit",
+    "version" : "1.0.0",
+    "description": "Add a notification for insecure versions of your modules.",
+    "stable": true,
+    "unlisted": false,
+    "repository": "https://github.com/maximousblk/audit",
+    "files": [
+        "./mod.ts",
+        "./README.md"
+    ]
+}
