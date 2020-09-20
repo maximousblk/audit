@@ -1,4 +1,4 @@
-**This is not an good solution and is not recommended to use**
+**This is not a good solution and is not recommended to use**
 
 ---
 
